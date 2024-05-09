@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+
+<body>
+    <center>
+        <label for="">First Number</label> <br>
+        <input type="text" id="in1"> <br><br>
+        <label for="">Second Number</label> <br>
+        <input type="text" id="in2"><br><br>
+        <label for="">Third Number</label> <br>
+        <input type="text" id="in3"><br><br>
+        <label for="">Forth Number</label> <br>
+        <input type="text" id="in4"><br><br>
+        <h4 id="ans"></h4>
+    </center>
+</body>
+
+</html>
+<script>
+    let a = document.getElementById("in1").value
+    let b = document.getElementById("in2").value
+    let c = document.getElementById("in3").value
+    let d = document.getElementById("in4").value
+    if (a < b && a < c && a < d) {
+        document.getElementById("ans").innerHTML = "First Number is Smallest Number"
+    }
+    else if (b < c && b < d) {
+        document.getElementById("ans").innerHTML = "Second Number is Smallest Number"
+    }
+    else if (c < d) {
+        document.getElementById("ans").innerHTML = "Third Number is Smallest Number"
+    }
+    else {
+        document.getElementById("ans").innerHTML = "Forth Number is Smallest Number"
+    }
+
+
+
+</script>

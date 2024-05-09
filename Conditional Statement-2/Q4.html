@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+</head>
+<body>
+<center><br><br><br><br><br><br><br><br>
+    <h1>**Number Comparison**</h1> <br><br><br>
+    <label for="" style="font-size: 25px;">Enter  Number : </label> <br><br><br>
+    <input type="text" id="in1" style="height: 30px;width: 250px;"> <br><br><br>
+    <h3 id="ans"></h3>
+</center>    
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("in1").value 
+    if(a>0){
+        document.getElementById("ans").innerHTML="Positive Number"
+    }else if(a<0){
+        document.getElementById("ans").innerHTML="Negative Number "
+    }else{
+        document.getElementById("ans").innerHTML="Zero"
+    }
+</script>
