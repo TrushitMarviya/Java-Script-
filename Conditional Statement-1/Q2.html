@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+<center><br><br><br><br><br><br><br><br>
+    <div style="height: 450px;width: 450px;border: 2px solid red;border-radius: 20px;">
+    <h1> **Grading System**</h1> <br><br><br>
+    <label for="" style="font-size: 25px;">Enter Student's score: </label> <br><br><br>
+    <input type="text" id="in1" style="height: 30px;width: 250px;">
+    <h3 id="ans"></h3>
+    </div>
+</center>    
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("in1").value 
+    if(a>90 && a<100){
+        document.getElementById("ans").innerHTML="A"
+    }else if(a>80 && a<90){
+        document.getElementById("ans").innerHTML="B"
+    }else if(a>70 && a<80){
+        document.getElementById("ans").innerHTML="C"
+    }else if(a>60 && a<70){
+        document.getElementById("ans").innerHTML="D"
+    }
+    else{
+        document.getElementById("ans").innerHTML="F"
+    }
+</script>
