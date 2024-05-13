@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+<center>
+    <br><br><br><br><br><br>
+    <div style="height: 500px;width: 500px;border: 1px solid ;border-radius: 20px;">
+    <h1>*** Change Password ***</h1>
+    <br><br>
+    <h2>Your Password :trushit@123 </h2>
+    <label for="" style="font-size: 30px;">Enter New Password  :</label> <br><br>
+    <input type="text" id="in1" style="height: 40px;width: 200px;"> <br><br><br><br>
+    <h3 id="ans"></h3>
+    </div>
+</center>
+</body>
+</html>
+
+<script>
+    let Password = "trushit@123" 
+    let new_password = document.getElementById("in1").value
+    Password = new_password
+    document.getElementById("ans").innerHTML="Your New Password is :" +Password
+</script>

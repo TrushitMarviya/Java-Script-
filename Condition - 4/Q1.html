@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+<center>
+    <br><br><br><br><br><br>
+    <div style="height: 500px;width: 500px;border: 1px solid ;border-radius: 20px;">
+    <h1>*** Grade System ***</h1>
+    <br><br>
+    <label for="" style="font-size: 30px;">Enter Marks :</label> <br><br>
+    <input type="text" id="in" style="height: 40px;width: 200px;"> <br><br><br><br>
+    <h2 id="ans"></h2>
+    </div>
+</center>
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("in").value
+    if(a==""){
+        document.getElementById("ans").innerHTML="Please Enter Marks"
+    }else{
+        if(a>90 && a<=100){
+            document.getElementById("ans").innerHTML="A"
+        }else if (a>80 && a<=90){
+            document.getElementById("ans").innerHTML="B"
+        }else if (a>65 && a<=80){
+            document.getElementById("ans").innerHTML="C"
+        }else if (a>=50 && a<=65){
+            document.getElementById("ans").innerHTML="D"
+        }else{
+            document.getElementById("ans").innerHTML="F"
+        }
+    }
+</script>
