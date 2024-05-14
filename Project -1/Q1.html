@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+
+<body>
+    <center>
+        <h1> *** Ticket Prices *** </h1>
+        <label for="" style="font-size: 25px;">Enter Your Age </label> <br><br>
+        <input type="text" id="in">
+    </center>
+</body>
+
+</html>
+<script>
+    let age = document.getElementById("in").value;
+    if (age === "") {
+        document.write("Enter Your Age")
+    } else {
+        if (age <= 12) {
+            document.write("Ticket Price: 5$")
+        } else if (age > 12 && age <= 18) {
+            document.write("Ticket Price: 10$")
+        } else if (age > 18 && age <= 60) {
+            document.write("Ticket Price: 20$")
+        } else {
+            document.write("Ticket Price: 15$")
+        }
+    }
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+</head>
+
+<body>
+    <center>
+        <h1> *** Game ***</h1>
+        <label for="">Enter Any Number (0-100)</label> <br><br>
+        <input type="text" id="in">
+        <h2 id="ans"></h2>
+    </center>
+</body>
+
+</html>
+<script>
+    let a = 14
+    let b = document.getElementById("in").value
+    if (b == "") {
+        document.getElementById("ans").innerHTML = "Please Enter a Number"
+    } else {
+        if (b == a) {
+            document.getElementById("ans").innerHTML = "Congtratilation You Won a Game "
+        } else if (b > a) {
+            document.getElementById("ans").innerHTML = "Your Number is Higher"
+        } else {
+            document.getElementById("ans").innerHTML = "Your Number is Lower"
+        }
+    }
+</script>

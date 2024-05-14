@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+ </head>
+ <body>
+    <center>
+        <h1>*** Discount ***</h1>
+        <label for="">Enter Your Amount</label> <br><br>
+        <input type="text" id="in">
+        <h3 id="ans"></h3>
+    </center>
+ </body>
+ </html>
+
+ <script>
+    let a = document.getElementById("in").value
+    if(a===""){
+        document.getElementById("ans").innerHTML = "Please Enter Your Amount"
+    }else{
+        if(a>=100){
+            document.getElementById("ans").innerHTML = "Discount 20%"
+    } else if ( a>=50){
+        document.getElementById("ans").innerHTML = "Discount 10%"
+    }else{
+        document.getElementById("ans").innerHTML = "Discount 0%"
+    }
+    }
+ </script>

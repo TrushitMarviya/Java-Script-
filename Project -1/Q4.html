@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+</head>
+<body>
+    <center>
+        <h1>*** Convert Dollars Into Rupees ***</h1>
+        <label for="" style="font-size:25px;">Enter Rupees In Dollars</label> <br><br>
+        <input type="text" id="in">
+        <h4 id="ans"></h4>
+    </center>
+</body>
+</html>
+<script>
+    let a = document.getElementById("in").value
+    let b = a * 83.5
+    if(a==""){
+        document.getElementById("ans").innerHTML = "Please Enter Value"
+    }{
+        document.getElementById("ans").innerHTML = b
+    }
+</script>
