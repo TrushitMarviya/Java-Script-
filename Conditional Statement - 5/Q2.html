@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+    <center>
+        <h1>***Calculator</h1>
+        <label for="">Enter First Number</label> <br><br>
+        <input type="number" id="in1"> <br><br><br>
+        <label for="">Enter Operator</label> <br><br>
+        <input type="text" id="in2"> <br><br><br>
+        <label for="">Enter Second Number</label> <br><br>
+        <input type="number" id="in3"> <br><br><br>
+        <h1 id="ans"></h1>
+    </center>
+</body>
+</html>
+<script>
+    let a = document.getElementById("in1").value 
+    let operator = document.getElementById("in2").value 
+    let b = document.getElementById("in3").value 
+    if(a=="" && operator =="" && b==""){
+        document.getElementById("ans").innerHTML = "Please Enter All Values"
+    }else{
+        switch(operator){
+            case "+":document.getElementById("ans").innerHTML = +a + +b
+            break
+            case "-":document.getElementById("ans").innerHTML = +a - +b
+            break
+            case "*":document.getElementById("ans").innerHTML = +a * +b
+            break
+            case "/":document.getElementById("ans").innerHTML = +a / +b
+            break
+            default:document.getElementById("ans").innerHTML = "Invalid Operator"
+        }
+    }
+</script>

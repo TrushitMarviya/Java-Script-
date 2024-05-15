@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+</head>
+
+<body>
+    <center>
+        <h1>***language***</h1>
+    <h1>Enter languages</h1>
+    <input type="text" id="in">
+    <h2 id="ans"></h2>
+</center>
+</body>
+
+</html>
+
+<script>354
+    let lang = document.getElementById("in").value
+    if (lang ==="") {
+        document.getElementById("ans").innerHTML = "Enter Language"
+    } else {
+        switch (lang) {
+            case "English":document.getElementById("ans").innerHTML ="Hello!"
+            break
+            case "Spanish":document.getElementById("ans").innerHTML = "¡Hola!"
+            break
+            case "French":document.getElementById("ans").innerHTML = "Bonjour!"
+            break
+            default:
+            document.getElementById("ans").innerHTML="Invalid Language"
+            break
+        }
+    }
+</script>
