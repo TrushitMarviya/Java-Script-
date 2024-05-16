@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+    <center>
+        <label for="">Enter Name</label> <br><br>
+        <input type="text" id="in">
+        <h4 id="ans"></h4>
+    </center>
+</body>
+</html>
+
+<script>
+let name=document.getElementById("in").value
+let res1=""
+let res2=""
+for(let i=1;i<=name.length;i++){
+    res1+=name[i]
+}
+for(let i=name.length-1;i>=0;i-- ){
+    res2+=name[i]
+}
+if(res1==res2){
+    document.getElementById("ans").innerHTML="The given string is palindrome"
+}else{
+    document.getElementById("ans").innerHTML="The given string is not palindrome"
+}
+</script>
