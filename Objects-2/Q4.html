@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let Student = [
+        {name: "John", num: 21, grade: 90},
+        {name: "Alice", num: 22, grade: 10},
+        {name: "Bob", num: 21, grade: 70},
+        {name: "Dean", num:5, grade:40},
+        {name: "Elice", num:5,grade:80}
+    ]
+    let ans = Student.reduce((acc , curr)=>{
+        return acc+=curr.grade
+    },0)
+    console.log(ans);
+</script>
