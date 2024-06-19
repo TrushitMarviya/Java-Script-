@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let BookStall=[
+        {title:"Ramayan" , author : "Maharshi Valmiki" , price : 160 , quantityAvailable : 150 }, 
+        {title:"Mahabharat" , author : "Maharshi Vyash" , price : 140 , quantityAvailable : 80 }, 
+        {title:"CharakSanhita" , author : "Acharya Charak" , price : 200 , quantityAvailable : 50 }, 
+        {title:"SushrutSanhita" , author : "Acharya Sushrut" , price : 250 , quantityAvailable : 50 }, 
+        {title:"Panchtantra" , author : "Vishnu Sharma" , price : 130 , quantityAvailable : 100 }, 
+        {title:"Hitopadesha" , author : "Narayana Pandit" , price :140 , quantityAvailable : 0 }, 
+    ]
+    let cat = BookStall.filter((el)=>{
+        return el.quantityAvailable > 0 && el.price<60
+    })
+    console.log(cat);
+</script>
