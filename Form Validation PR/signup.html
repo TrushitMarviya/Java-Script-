@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <div class="form">
+                <div class="container2">
+                    <a href="login.html" id="signup">Login</a><br><br><br><br>
+                    <p id="reg"><b>Registration</b></p>
+                    <form action="login.html" id="signout">
+                        <br><br>
+                        <label for="" style="font-size: 18px;position: relative;left: -30.5%;">Username <span
+                                style="color: red;">*</span></label> <br>
+                        <input type="text" id="name"> <br><br>
+                        <label for="" style="font-size: 18px;position: relative;left: -33.5%;">E-mail <span
+                                style="color: red;">*</span></label> <br>
+                        <input type="email" id="email"> <br><br>
+                        <label for="" style="font-size: 18px;position: relative;left: -30.5%;">Password <span
+                                style="color: red;">*</span></label> <br>
+                        <input type="text" id="pw"> <br><br>
+                        <label for="" style="font-size: 18px;position: relative;left: -22.5%;">Confirm Password <span
+                                style="color: red;">*</span></label> <br>
+                        <input type="text" id="cpw"> <br><br><br>
+                        <input type="submit" value="Sign up"
+                            style="background-color:#feb843;font-weight: bolder;border: none;">
+                        <br><br><br>
+                        <p id="err"></p><br><br>
+
+                    </form>
+
+                </div>
+            </div>
+        </center>
+    </div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        $("#signout").submit(function (event) {
+            event.preventDefault();
+            $("#err").text(" ");
+
+            
+            let password = $("#pw").val()
+            let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/
+            if (password == "") {
+                $("#err").text("Enter Password");
+            } else if (!passwordRegex.test(password)) {
+                $("#err").text("Enter Strong Password");
+            }
+            
+            let cPassword = $("#cpw").val()
+            if(password != cPassword){
+            $("#err").text("Password & Confirm Password Not Match !");
+            }
+
+            let email = $("#email").val()
+            if (email == "") {
+                $("#err").text("Enter Email ID");
+            }
+
+            let name = $("#name").val()
+            if (name == "") {
+                $("#err").text("Please Enter Name");
+            }
+        })
+    })
+</script>
