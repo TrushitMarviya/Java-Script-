@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=7, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class Food {
+        cook(name){
+            console.log(this.name);
+        }
+    }
+    class Pizza extends Food {
+        cook(name){
+            console.log(name + " is Ordered")
+        }
+    }
+    class Burger extends Food {
+        cook(name){
+            console.log(name + " is Ordered")
+        }
+    }
+    class Sushi extends Food {
+        cook(name){
+            console.log(name + " is Ordered")
+        }
+    }
+
+    let pizza = new Pizza()
+    pizza.cook("Margherita Pizza")
+    let burger = new Burger()
+    burger.cook("Stuffed Burger")
+    let shusi = new Sushi()
+    shusi.cook("Gunkan Shusi")
+</script>
