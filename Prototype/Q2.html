@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr = [1,2,3,4,5,6,7,8,9,10];
+
+    Array.prototype.even_Num = function(ele){
+        let ans_array = [];
+        for(let i = 0; i < this.length; i++){
+            if(ele(this[i])){
+                ans_array.push(this[i]);
+        }
+    }
+    return ans_array
+    }
+
+    let odd = arr.even_Num((el)=>{
+        return el   % 2 != 0;
+    })
+    console.log(odd);
+</script>
