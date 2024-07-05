@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+    
+</body>
+</html>
+ <script>
+    class automobile{
+        constructor (name , price ,range){
+            this.name = name
+            this.price = price
+            this.range = range 
+        }
+        showrange(name , range){
+        console.log(this.name +" Range is " +  this.range + " Km/h")
+        }
+        showprice(name , price){
+        console.log(this.name +" Price is " + this.price +" Rs")
+        }
+    }
+    class electricVehicle extends automobile {
+    }
+
+let punch = new electricVehicle("Punch",814000,216)
+punch.showrange("Punch",216)
+punch.showprice("Punch",814000)
+let nexon = new electricVehicle("Nexon",1140000,290)
+nexon.showrange("Nexon",290)
+nexon.showprice("Punch",1140000)
+    </script>

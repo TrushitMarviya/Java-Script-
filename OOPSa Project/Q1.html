@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr = [90,91,92,93,94,95,96,97,98,99,100]
+    Array.prototype.numSquare = function (el){
+        let newArr = [] 
+        for(let i = 0; i < this.length; i++){
+            newArr.push(el(this[i]))
+    }
+    return newArr
+}
+
+    Array.prototype.evenNum = function (el){
+        let newArr2= []
+        for(let i = 0; i < this.length; i++){
+         if(el(this[i])){
+            newArr2.push(this[i])
+        }
+    }
+    return newArr2
+}
+let ans = arr.numSquare((el)=>{
+    return el * el
+})
+console.log(ans);
+
+let ans2 = arr.evenNum((el)=>{
+    return el % 2 == 0
+})
+console.log(ans2);
+
+
+</script>
