@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider & Counter</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        background-color: #000;
+    }
+    img{
+        height: 100vh;
+        width: 100%;
+        display: none;
+    }
+    .sec2{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+    }
+    .sec21{
+        height: auto;
+        width: 50%;
+        z-index: 2;
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHaFMzIjPcby78WjdRtpH2PpEZxQE49VOvYDV-lfJa3Y0D7xBa587vqnk5OZGKKDxdUPY&usqp=CAU);
+        background-size: cover;
+    }
+    .sec22{
+        height: auto;
+        width: 50%;
+        background-color: #000;
+    }
+    .sec221{
+    height: 200px;
+    width: 50%;
+    border: 2px solid ;
+    }
+    .sec222{
+    height: 200px;
+    width: 50%;
+    border: 2px solid ;
+    float: right;
+    position: relative;
+    top: -200px;
+    }
+
+</style>
+<body>
+<div class="sec1">
+    <img src="https://s26162.pcdn.co/wp-content/uploads/2019/11/Momo.jpg" alt="">
+    <img src="https://media.istockphoto.com/id/862212368/photo/ghost.jpg?s=612x612&w=0&k=20&c=NjOru7eu_a20ZCKzJ65ebJ9J22Q690UFgdb2NAycMbs=" alt="">
+    <img src="https://t4.ftcdn.net/jpg/02/90/04/09/360_F_290040950_y49tZt99WfeT9pjZmd9Bv8EsaC5mmrRb.jpg" alt="">
+    <img src="https://img.freepik.com/free-photo/close-up-creepy-forest-creature_23-2150872670.jpg" alt="">
+    <img src="https://t4.ftcdn.net/jpg/05/72/93/15/360_F_572931508_vKFDNID3spmrKlAXqauyqSbnsx4qWwEE.jpg" alt="">
+</div>
+<br><br><br><br><br>
+<div class="sec2">
+<div class="sec21">
+</div>
+<div class="sec22"> <br><br><br>
+<p style="font-size: 1.5rem;color: white; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, veritatis obcaecati pariatur, ullam voluptas Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nulla excepturi quo. Quisquam laborum, modi odit eaque molestiae corrupti nemo, voluptates nisi, perspiciatis neque beatae quos autem nesciunt dolor aspernatur. error magnam quia repellat incidunt molestias ab accusamus voluptates atque debitis provident minus voluptatem, odio repellendus!</p>
+<br><br><br><br>
+<div class="sec221">
+    <br><br><br>
+    <p id="i1" style="text-align: center;font-size: 50px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: red;"></p> <br>
+    <p style="font-size: 35px;text-align: center;color:white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Scare</p>
+</div>
+<div class="sec222">
+    <br><br><br>
+    <p id="i2" style="text-align: center;font-size: 50px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: red;"></p> <br>
+    <p style="font-size: 35px;color:white;text-align: center;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Murder</p>
+</div>
+</div>
+</div>
+</body>
+</html>
+<script>
+    let pic = document.querySelectorAll("img");
+    let index = 0;
+    function img_Slider(index){
+        for(let i=0;i<pic.length;i++){
+            pic[i].style.display = "none";
+        }
+        pic[index].style.display = "block";
+    }
+    function Show_images(){
+        setInterval(()=>{
+            img_Slider(index)
+            index++
+            if(index == pic.length){
+                index = 0;
+            }
+        },1000)
+    }
+    Show_images();
+
+
+    let num1 = 0 ; 
+    let stop1 = setInterval(()=>{
+        num1+=10;
+        document.querySelector("#i1").innerHTML = num1 + "+";
+        if(num1 == 250){
+            clearInterval(stop);
+        }
+    },100)
+
+    let num2 = 0 ; 
+    let stop2 = setInterval(()=>{
+        num2+=5;
+        document.querySelector("#i2").innerHTML = num2 + "+";
+        if(num == 100){
+            clearInterval(stop);
+            document.querySelector("#i2").style.color = "red";
+        }
+    },500)
+
+</script>
