@@ -6,7 +6,7 @@
     <title>Q1</title>
 </head>
 <body>
-    <h1></h1>
+    <div id="p1"></div>
 </body>
 </html>
 <script>
@@ -14,8 +14,20 @@
     .then((res)=>{
         return res.json();
     }).then((json)=>{
-        console.log(json)
+        // console.log(json)
+        Api(json);
     }).catch((err)=>{
         console.log(err);
     })
+    function Api (json){
+        json.map((el)=>{
+            let div = document.createElement('div');
+            let h1 = document.createElement('h1');
+            h1.innerHTML = el.title;
+            let prise = document.createElement('h2');
+            prise.innerHTML = el.price ;
+            div.append(h1, prise)
+            document.querySelector("#p1").append(div)
+        })
+    } 
 </script>
