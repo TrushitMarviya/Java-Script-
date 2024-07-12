@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,4 +31,38 @@
             document.querySelector("#p1").append(div)
         })
     } 
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+    <div id="p1"></div>
+</body>
+</html>
+<script>
+    fetch('https://fakestoreapi.com/products')
+    .then((res)=>{
+        return res.json();
+    }).then((json)=>{
+        // console.log(json)
+        Api(json);
+    }).catch((err)=>{
+        console.log(err);
+    })
+    function Api (json){
+        json.map((el)=>{
+            let div = document.createElement('div');
+            let h1 = document.createElement('h1');
+            h1.innerHTML = el.title;
+            let prise = document.createElement('h2');
+            prise.innerHTML = el.price ;
+            div.append(h1, prise)
+            document.querySelector("#p1").append(div)
+        })
+    } 
+>>>>>>> b7db55867f07f0e493b0fb2e0f4e49ff8d321e67
 </script>
