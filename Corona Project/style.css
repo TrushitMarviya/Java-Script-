@@ -1,0 +1,75 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#container{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(https://culture.ec.europa.eu/sites/default/files/styles/eac_ratio_16_9_large/public/2020-09/cover-Covid19.png?h=e499574d&itok=BcdNZMyo);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#main{
+    height: 600px;
+    width: 450px;
+    border: 1px solid white;
+    margin-left: 33%;
+    margin-top: 3.2%;
+    border-radius: 25px;
+}
+#in1{
+    height: 45px;
+    width: 275px;
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-left: 40px;
+    margin-top: 25px;
+}
+#bt1{
+    height: 47px;
+    width: 47px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 1.1rem;
+    margin-left: 30px;
+    cursor: pointer;
+}
+#l1{
+    font-size: 2rem;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 40px;
+}
+#total{
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 40px;
+}
+#p_case{
+    color: rgb(0, 38, 255);
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 40px;
+}
+#r_case{
+    color: green;
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 40px;
+}
+#d_case{
+    color: red;
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 40px;
+}
