@@ -1,0 +1,27 @@
+.bt1{
+    height: 50px;
+    width: 458px;
+    border: 0px;
+    border-radius: 25px;
+    background-color: #000000;
+    color: white;
+}
+footer{
+    background-color: #222222;
+    color: white;
+}
+.bt-3{
+    height: 50px;
+    width: 175px;
+    border-radius: 25px;
+    background-color:#7683e0;
+    color: white;
+    border: none;
+    font-weight: 700;
+}
+.bt-3:hover{
+    background-color:white;
+    color: #7683e0;
+    font-weight: 700;
+    transition-duration: 0.5    s;
+}
